@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: blueviolet;
+}
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 100%;
+	min-height: 100vh;
+	font-family: "Rubik", sans-serif;
+}
+
+/* Dog images */
+img {
+	width: 40px;
+	border-radius: 10px;
+}
+.flex-container {
+	display: flex;
+	max-width: 820px;
+	max-height: 505px;
+}
+
+/* Phone container */
+.app-container {
+	position: relative;
+	width: 260px;
+	height: 550px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 3em;
+	overflow: hidden;
+	font-size: 12px;
+	flex-shrink: 0;
+	border: 10px solid rgb(255, 255, 255);
+}
+.app-container::before {
+	content: "";
+	position: absolute;
+	left: 123px;
+	top: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 30px;
+	background-color: rgb(0, 0, 0);
+	z-index: 999;
+}
+
+/* Header in the app */
+.app-header {
+	display: flex;
+	align-items: center;
+	padding-top: 25px;
+	position: relative;
+	width: 100%;
+	height: 66px;
+	background-color: aqua;
+	text-align: left;
+	border-radius: 0.5em;
+}
+.app-header > i:first-child {
+	position: absolute;
+	left: 15px;
+	bottom: 17px;
+	font-size: 18px;
+}
+.app-header > i:last-child {
+	position: absolute;
+	right: 17px;
+	bottom: 17px;
+	font-size: 20px;
+}
+.app-header > i:hover {
+	color: blue;
+	cursor: pointer;
+}
+.app-header > img {
+	position: absolute;
+	left: 50px;
+	bottom: 10px;
+	width: 35px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.app-header > p {
+	position: absolute;
+	left: 95px;
+	bottom: 15px;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+}
+.app-header > p > span {
+	font-size: 9px;
+}
+
+/* Body in the app */
+.app-body {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	gap: 10px;
+	background-color: hsl(270, 100%, 12%);
+	height: 470px;
+}
+
+/* Message boxes */
+.message-box {
+	display: flex;
+	max-width: 130px;
+	font-size: 9px;
+	line-height: 13px;
+	padding: 7px;
+	font-weight: 300;
+}
+.message-box.left {
+	background-color: hsla(276, 55%, 52%, 0.134);
+	color: hsl(276, 55%, 52%);
+	border-radius: 15px 15px 15px 3px;
+}
+.message-box.right {
+	background-color: hsla(271, 15%, 43%, 0.149);
+	color: hsl(271, 15%, 43%);
+	align-self: flex-end;
+	border-radius: 15px 15px 3px 15px;
+}
+.message-dogimages {
+	display: flex;
+	column-gap: 5px;
+	align-self: flex-end;
+	size: 15px;
+}
+
+/* Pricing messages */
+.msg-pricing {
+	width: 3000px;
+	background-color: hsla(276, 55%, 52%, 0.16);
+	color: hsla(188, 100%, 50%, 0.712);
+	display: flex;
+	justify-content: space-between;
+	border-radius: 15px 15px 15px 3px;
+}
+.msg-pricing > p > i {
+	cursor: pointer;
+	margin-right: 5px;
+	color: rgba(21, 230, 184, 0.596);
+}
+
+/* Message send box */
+.msg-type-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 35px;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+input[type="text"] {
+	width: 170px;
+	height: 35px;
+	border-radius: 20px;
+	color: hsl(0, 0%, 58%);
+	border: none;
+	outline: none;
+}
+.mdg-type-box-send-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	background-color: hsl(271, 36%, 24%);
+	color: rgba(255, 255, 255, 0.629);
+	width: 33px;
+	height: 33px;
+	position: relative;
+	left: 7px;
+	cursor: pointer;
+}
+article {
+	width: 200px;
+	font-size: 16px;
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+article > p {
+}
