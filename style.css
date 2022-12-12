@@ -4,16 +4,44 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
-	background-color: blueviolet;
+	background-color: rgb(228, 228, 228);
+	max-width: 100%;
 }
 main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 100%;
-	min-height: 100vh;
+	width: 100%;
+	height: 100vh;
 	font-family: "Rubik", sans-serif;
+}
+
+.background-shape-colorful {
+	position: absolute;
+	content: "";
+	background-image: linear-gradient(
+		to bottom,
+		hsl(293, 36%, 53%),
+		hsl(264, 100%, 61%)
+	);
+	height: 90%;
+	width: 35%;
+	border-radius: 0 0 50% 50%;
+	top: 0;
+	left: -150px;
+}
+
+.background-shape-gray {
+	position: absolute;
+	content: "";
+	background-color: rgba(145, 145, 145, 0.064);
+	height: 80%;
+	width: 30%;
+	border-radius: 50% 50% 0 0;
+	bottom: 0;
+	right: -160px;
 }
 
 /* Dog images */
@@ -23,8 +51,13 @@ img {
 }
 .flex-container {
 	display: flex;
-	max-width: 820px;
-	max-height: 505px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: fit-content;
+	height: fit-content;
+	gap: 5rem;
+	margin: 50px 0;
 }
 
 /* Phone container */
@@ -38,6 +71,8 @@ img {
 	font-size: 12px;
 	flex-shrink: 0;
 	border: 10px solid rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.232) 0px 0px 20px 0px,
+		rgba(0, 0, 0, 0.818) 5px 5px 0px 0px;
 }
 .app-container::before {
 	content: "";
@@ -59,24 +94,30 @@ img {
 	position: relative;
 	width: 100%;
 	height: 66px;
-	background-color: aqua;
+	background-image: linear-gradient(
+		to right,
+		hsl(293, 61%, 44%),
+		hsl(264, 100%, 61%)
+	);
+	color: hsl(270, 20%, 96%);
 	text-align: left;
-	border-radius: 0.5em;
 }
 .app-header > i:first-child {
 	position: absolute;
 	left: 15px;
 	bottom: 17px;
 	font-size: 18px;
+	transition: color 100ms ease-in;
 }
 .app-header > i:last-child {
 	position: absolute;
 	right: 17px;
 	bottom: 17px;
 	font-size: 20px;
+	transition: color 100ms ease-in;
 }
 .app-header > i:hover {
-	color: blue;
+	color: hsl(271, 35%, 39%);
 	cursor: pointer;
 }
 .app-header > img {
@@ -90,7 +131,7 @@ img {
 .app-header > p {
 	position: absolute;
 	left: 95px;
-	bottom: 15px;
+	bottom: 14px;
 	display: flex;
 	flex-direction: column;
 	font-size: 14px;
@@ -138,17 +179,25 @@ img {
 
 /* Pricing messages */
 .msg-pricing {
-	width: 3000px;
 	background-color: hsla(276, 55%, 52%, 0.16);
 	color: hsla(188, 100%, 50%, 0.712);
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
 	border-radius: 15px 15px 15px 3px;
 }
-.msg-pricing > p > i {
-	cursor: pointer;
+
+.msg-pricing > p > input {
 	margin-right: 5px;
 	color: rgba(21, 230, 184, 0.596);
+}
+.msg-pricing > p > span {
+	position: relative;
+	bottom: 2px;
+}
+.msg-pricing > p:nth-child(2) {
+	font-size: 10px;
+	font-weight: 700;
 }
 
 /* Message send box */
@@ -185,14 +234,21 @@ input[type="text"] {
 	cursor: pointer;
 }
 article {
-	width: 200px;
+	max-width: 30rem;
 	font-size: 16px;
 	display: flex;
 	text-align: left;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: center;
-}
 
+	row-gap: 2rem;
+}
+article > h1 {
+	font-size: 2.5rem;
+	color: hsl(271, 36%, 24%);
+}
 article > p {
+	color: hsl(270, 7%, 64%);
+	font-size: 18px;
+	width: fit-content;
 }
