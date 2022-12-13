@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+body {
+	background-color: rgb(238, 238, 238);
+	min-width: 100%;
+	min-height: 100vh;
+}
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	font-family: "Rubik", sans-serif;
+	padding: 10%;
+}
+
+.background-shape-colorful {
+	position: absolute;
+	content: "";
+	background-image: linear-gradient(
+		to bottom,
+		hsl(293, 36%, 53%),
+		hsl(264, 100%, 61%)
+	);
+	width: 50vw;
+	height: 50vw;
+	max-width: 600px;
+	max-height: 600px;
+	border-radius: 50%;
+	opacity: 0.2;
+	left: 5vw;
+	top: 2vw;
+}
+
+.background-shape-gray {
+	position: absolute;
+	content: "";
+	background-color: rgba(145, 145, 145, 0.064);
+	height: 40vw;
+	width: 40vw;
+	border-radius: 50%;
+	bottom: 5vw;
+	right: 5vw;
+}
+
+/* Dog images */
+img {
+	width: 40px;
+	border-radius: 10px;
+}
+.flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 800px;
+	gap: 10%;
+}
+
+/* Phone container */
+.app-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 260px;
+	height: 550px;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 3em;
+	overflow: hidden;
+	font-size: 12px;
+	flex-shrink: 0;
+	border: 10px solid rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.232) 0px 0px 20px 0px,
+		rgba(0, 0, 0, 0.818) 5px 5px 0px 0px;
+}
+.app-container::before {
+	content: "";
+	position: absolute;
+	left: 123px;
+	top: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.799);
+	z-index: 999;
+}
+
+/* Header in the app */
+.app-header {
+	display: flex;
+	align-items: center;
+	padding-top: 25px;
+	position: relative;
+	width: 100%;
+	height: 66px;
+	background-image: linear-gradient(
+		to right,
+		hsl(293, 61%, 44%),
+		hsl(264, 100%, 61%)
+	);
+	color: hsl(270, 20%, 96%);
+	text-align: left;
+}
+.app-header > i:first-child {
+	position: absolute;
+	left: 15px;
+	bottom: 17px;
+	font-size: 18px;
+	transition: color 100ms ease-in;
+}
+.app-header > i:last-child {
+	position: absolute;
+	right: 17px;
+	bottom: 17px;
+	font-size: 20px;
+	transition: color 100ms ease-in;
+}
+.app-header > i:hover {
+	color: hsl(271, 35%, 39%);
+	cursor: pointer;
+}
+.app-header > img {
+	position: absolute;
+	left: 50px;
+	bottom: 10px;
+	width: 35px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+.app-header > p {
+	position: absolute;
+	left: 95px;
+	bottom: 14px;
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+}
+.app-header > p > span {
+	font-size: 9px;
+}
+
+/* Body in the app */
+.app-body {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	gap: 10px;
+	background-color: hsl(270, 100%, 12%);
+	height: 470px;
+}
+
+/* Message boxes */
+.message-box {
+	display: flex;
+	max-width: 130px;
+	font-size: 9px;
+	line-height: 13px;
+	padding: 7px;
+	font-weight: 300;
+}
+.message-box.left {
+	background-color: hsla(276, 55%, 52%, 0.134);
+	color: hsl(276, 55%, 52%);
+	border-radius: 15px 15px 15px 3px;
+}
+.message-box.right {
+	background-color: hsla(271, 15%, 43%, 0.149);
+	color: hsl(271, 15%, 43%);
+	align-self: flex-end;
+	border-radius: 15px 15px 3px 15px;
+}
+.message-dogimages {
+	display: flex;
+	column-gap: 5px;
+	align-self: flex-end;
+	size: 15px;
+}
+
+/* Pricing messages */
+.msg-pricing {
+	background-color: hsla(276, 55%, 52%, 0.16);
+	color: hsla(188, 100%, 50%, 0.712);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	border-radius: 15px 15px 15px 3px;
+}
+
+.msg-pricing > p > input {
+	margin-right: 5px;
+	color: rgba(21, 230, 184, 0.596);
+}
+.msg-pricing > p > span {
+	position: relative;
+	bottom: 2px;
+}
+.msg-pricing > p:nth-child(2) {
+	font-size: 10px;
+	font-weight: 700;
+}
+
+/* Message send box */
+.msg-type-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 35px;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+input[type="text"] {
+	width: 170px;
+	height: 35px;
+	border-radius: 20px;
+	color: hsl(0, 0%, 58%);
+	border: none;
+	outline: none;
+}
+.mdg-type-box-send-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	background-color: hsl(271, 36%, 24%);
+	color: rgba(255, 255, 255, 0.629);
+	width: 33px;
+	height: 33px;
+	position: relative;
+	left: 7px;
+	cursor: pointer;
+}
+article {
+	display: flex;
+	font-size: 16px;
+	text-align: left;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 2rem;
+}
+article > h1 {
+	font-size: 2.5rem;
+	color: hsl(271, 36%, 24%);
+}
+article > p {
+	color: hsl(270, 7%, 64%);
+	font-size: 18px;
+	width: fit-content;
+}
+@media (max-width: 640px) {
+	main {
+		min-height: 130vh;
+	}
+	.flex-container {
+		flex-wrap: wrap;
+		gap: 3rem;
+	}
+	article {
+		align-items: center;
+		text-align: center;
+	}
+}
